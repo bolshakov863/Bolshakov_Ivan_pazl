@@ -23,13 +23,13 @@ def game_over():
     pygame.draw.rect(screen, (0,0,0), text_rect.inflate(4, 4))
     screen.blit(text, text_rect)
 
-def draw_swaps():
-    font = pygame.font.SysFont('Arial', 32)
-    text = font.render(f'Количество перестановок: {swaps}', True, (255, 255, 255))
-    text_rect = text.get_rect()
-    text_rect.center = (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 100)
-    pygame.draw.rect(screen, (0, 0, 0), text_rect.inflate(4, 4))
-    screen.blit(text, text_rect)
+#def draw_swaps():
+#    font = pygame.font.SysFont('Arial', 32)
+#    text = font.render(f'Количество перестановок: {swaps}', True, (255, 255, 255))
+#    text_rect = text.get_rect()
+#    text_rect.center = (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 100)
+#    pygame.draw.rect(screen, (0, 0, 0), text_rect.inflate(4, 4))
+#    screen.blit(text, text_rect)
 
 import pygame
 pygame.init()
@@ -97,7 +97,7 @@ while running:
 
     screen.fill((0, 0, 0))
     draw_tiles()
-    draw_swaps()
+#    draw_swaps()
     if tiles == origin_tiles:
         game_over()
     pygame.display.flip()
